@@ -1,0 +1,16 @@
+{
+  "name": "es6-snippets",
+  "version": "1.0.0",
+  "description": "This repository helps to move from es2015 to es2016 with changes and snippets to make use of modern JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "es6",
+    "modern-JavaScript",
+    "js"
+  ],
+  "author": "rishab",
+  "license": "MIT"
+}
