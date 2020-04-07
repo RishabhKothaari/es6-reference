@@ -39,21 +39,50 @@ const name = "Octocat";
 const person = {
   name: "Octocat",
   sayHello: function () {
-    return "Hello I am "+this.name;
+    return "Hello I am " + this.name;
   },
-  walk:function(){
-      return "I am walking";
+  walk: function () {
+    return "I am walking";
   },
-  //es6 way of adding a method to a object skip the ':' 
-  run(){
-      return "I am running";
-  }
+  //es6 way of adding a method to a object skip the ':'
+  run() {
+    return "I am running";
+  },
 };
 console.log(person.name); //Octocat
 console.log(person.sayHello()); //Hello I am Octocat
 person.name = "kitten";
-person.sayBye = function(){
-    return "Bye I am "+person.name;
-}
-console.log(person.run())
+person.sayBye = function () {
+  return "Bye I am " + person.name;
+};
+console.log(person.run());
 console.log(person.sayBye()); //Bye
+
+/**
+ * this keyword
+ * this always refers to the object with which the method is called and is undefined if the
+ * method is called from a reference.
+ * Functions in JavaScript are objects so we can bind object to a reference
+ */
+
+const animal = {
+  name: "Octocat",
+  walk() {
+    console.log(this);
+  },
+};
+console.log(animal.walk()); // animal object
+
+const octoWalk = animal.walk; // refrence to animal.walk()
+octoWalk(); // window or undefined
+/**
+ * use bind to bind the reference
+ */
+const octoKitten = {
+    "name":"kitten",
+    speak(){
+        console.log("meow..meow from ",this)
+    }
+}
+const speak = octoKitten.speak.bind(octoKitten)
+speak()// meow..meow..octoKitten
