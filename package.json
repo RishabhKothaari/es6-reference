@@ -1,7 +1,7 @@
 {
-  "name": "es6-snippets",
+  "name": "es6-reference",
   "version": "1.0.0",
-  "description": "This repository helps to move from es2015 to es2016 with changes and snippets to make use of modern JavaScript",
+  "description": "This repository helps me moving towards es6. It contains examples of es6 changes and snippets of changes made to JavaScript.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
